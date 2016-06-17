@@ -1,0 +1,57 @@
+/* ==================================== COMPONENTS ==================================== */
+
+/* ======== HEADER ======== */
+
+header {
+	padding: 2em 0;
+	margin: 0;
+}
+
+
+.ws-logo {
+	margin: 0 auto;
+	padding: 0;
+}
+
+
+.ws-logo a {
+	display: block;
+}
+
+
+
+/* ======== SECTIONS ======== */
+
+
+.subscribe-content {
+	padding: 2em 0;
+	margin: 0;
+}
+
+
+.subscribe-content:nth-child(even) {
+	background-color: $offwhite-color;
+}
+
+
+.notification-banner {
+	@extend .text-shadow;
+
+	@include font-size(44px);
+	font-weight: 700;
+	text-align: center;
+
+	padding: 0.64em 0;
+	margin: 0;
+	background-color: $red-color;
+	color: $offwhite-color;
+}
+
+
+
+/* ======== FOOTER ======== */
+
+footer {
+	padding: 2em 0;
+	margin: 0;
+}

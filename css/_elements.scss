@@ -1,0 +1,138 @@
+/* ==================================== ELEMENTS ==================================== */
+
+body{
+    font-size: $base-font-size;
+    font-family: "Open Sans","Helvetica Neue",sans-serif;
+    line-height: 1.4;
+    font-weight: 400; /* available weights: 400, 600 & 700 */
+    letter-spacing: 0.0156em;
+    color: $black-color;
+    background-color: $beige-color;
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+}
+
+
+section {
+    padding: 0;
+    margin: 0;
+}
+
+
+a {
+    @extend .transition;
+
+    color: $red-color;
+    text-decoration: none;
+
+    &:active,
+    &:focus,
+    &:visited {
+        color: $red-color;
+        text-decoration: none;
+    }
+
+    &:hover {
+        color: $black-color;
+        text-decoration: none;
+    }
+}
+
+
+img,
+embed,
+object,
+video {
+    max-width: 100%;
+    height: auto;
+}
+
+
+figure {
+    margin: 0;
+    padding: 0;
+}
+
+
+h1,h2,h3,h4,h5,h6{
+    font-weight: 700;
+    line-height: 1.24;
+    padding: 0;
+    margin: 0 0 0.36em 0;
+}
+
+
+h1,
+.h1 {
+    @include font-size(44px);
+}
+
+
+h2,
+.h2 {
+    @include font-size(40px);
+}
+
+
+h3,
+.h3 {
+    @include font-size(36px);
+}
+
+
+h4,
+.h4 {
+    @include font-size(32px);
+}
+
+
+h5,
+.h5 {
+    @include font-size(28px);
+}
+
+
+h6,
+.h6 {
+    @include font-size(24px);
+}
+
+
+hr {
+    border-color: $border-color;
+    margin: 0.8em 0;
+}
+
+
+b,
+strong,
+.bold {
+    font-weight: 600;
+}
+
+
+p,
+.paragraph {
+    margin: 0 0 1em 0;
+    padding: 0;
+}
+
+
+small,
+.small {
+    @include font-size(12px);
+}
+
+
+ul,
+ol {
+    padding: 0;
+    margin: 0;
+}
+
+
+aside {
+    padding: 0;
+    margin: 0;
+}
