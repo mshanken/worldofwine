@@ -1,11 +1,10 @@
 @charset 'utf-8';
 
 /* ================================ BASE ================================ */
-@import 'bootstrap'; /* http://getbootstrap.com/customize/ all except glyphicon & grid system. */
+@import 'bootstrap'; /* http://getbootstrap.com/customize/ all except glyphicons */
 
 @import 'variables';
 @import 'mixins';
-@import 'flexboxgrid'; /* grid system: http://flexboxgrid.com/ */
 @import 'helpers';
 @import 'elements';
 

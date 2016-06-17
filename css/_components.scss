@@ -9,8 +9,12 @@ header {
 
 
 .ws-logo {
-	margin: 0 auto;
+	margin: 0;
 	padding: 0;
+	text-align: center;
+	@include bp-small {
+		text-align: left;
+	}
 }
 
 
@@ -47,6 +51,63 @@ header {
 	color: $offwhite-color;
 }
 
+
+.flex-button-container {
+	display: flex;
+    flex-flow: row wrap;
+    align-items: stretch;
+    justify-content: center;
+}
+
+
+.flex-button-item {
+	flex-grow: 1;
+	align-self: center;
+
+    width: 100%;
+    text-align: center;
+
+    @include bp-small {
+        width: calc(33% - 1.12em);
+    }
+}
+
+
+.subscribe-button {
+	display: inline-block;
+    border-radius: 4px;
+    color: $offwhite-color;
+    background-color: $red-color;
+    box-shadow: 0 2px 0 darken($red-color, 10%);
+    margin: 0 0.56em 0.56em 0;
+    padding: 0.64em;
+    @include font-size(19px);
+    font-weight: 600;
+    line-height: 1.2;
+    @extend .text-shadow;
+
+	@include bp-medium {
+		@include font-size(23px);
+	}
+
+	@include bp-large {
+		@include font-size(28px);
+	}
+
+	    &:active,
+        &:focus,
+        &:visited {
+            color: $offwhite-color;
+		    background-color: $red-color;
+		    box-shadow: 0 2px 0 darken($red-color, 10%);
+        }
+
+        &:hover {
+            color: $white-color;
+		    background-color: darken($red-color, 10%);
+		    box-shadow: 0 2px 0 $black-color;
+        }
+}
 
 
 /* ======== FOOTER ======== */

@@ -15,21 +15,21 @@
 
 
 
-/* more semantic breakpoint names ...changing min-widths to match flexboxgrid css http://flexboxgrid.com/ */
+/* more semantic breakpoint names */
 @mixin bp-small {
-  @media only screen and (min-width: 48em) {
+  @media only screen and (min-width : 768px) {
     @content;
   }
 }
 
 @mixin bp-medium {
-  @media only screen and (min-width: 64em) {
+  @media only screen and (min-width : 992px) {
     @content;
   }
 }
 
 @mixin bp-large {
-  @media only screen and (min-width: 75em) {
+  @media only screen and (min-width : 1200px) {
     @content;
   }
 }
