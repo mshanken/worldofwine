@@ -12,7 +12,7 @@ header {
 	margin: 0;
 	padding: 0;
 	text-align: center;
-	@include bp-small {
+	@include bp-medium {
 		text-align: left;
 	}
 }
@@ -30,6 +30,9 @@ header {
 .subscribe-content {
 	padding: 2em 0;
 	margin: 0;
+	@include bp-small {
+		padding: 4em 0;
+	}
 }
 
 
@@ -53,10 +56,16 @@ header {
 
 
 .flex-button-container {
+	margin: 1em 0 0;
+	padding: 0;
 	display: flex;
     flex-flow: row wrap;
     align-items: stretch;
     justify-content: center;
+
+    @include bp-small {
+    	margin-top: 2em;
+    }
 }
 
 
@@ -78,17 +87,17 @@ header {
     border-radius: 4px;
     color: $offwhite-color;
     background-color: $red-color;
-    box-shadow: 0 2px 0 darken($red-color, 10%);
+    box-shadow: 0 2px 0 darken($red-color, 16%);
     margin: 0 0.56em 0.56em 0;
     padding: 0.64em;
-    @include font-size(19px);
+    @include font-size(23px);
     font-weight: 600;
     line-height: 1.2;
-    @extend .text-shadow;
+    text-shadow: 0 1px 0 darken($red-color, 16%);
 
-	@include bp-medium {
-		@include font-size(23px);
-	}
+    @include bp-small {
+    	@include font-size(18px);
+    }
 
 	@include bp-large {
 		@include font-size(28px);
@@ -99,7 +108,7 @@ header {
         &:visited {
             color: $offwhite-color;
 		    background-color: $red-color;
-		    box-shadow: 0 2px 0 darken($red-color, 10%);
+		    box-shadow: 0 2px 0 darken($red-color, 16%);
         }
 
         &:hover {
@@ -110,9 +119,41 @@ header {
 }
 
 
+
+.event-dates {
+	padding: 0 0 0 1.32em;
+	margin: 0;
+	list-style-type: circle;
+	@include bp-medium {
+		padding-left: 2.32em;
+	}
+
+	li {
+		margin-bottom: 0.32em;
+	}
+}
+
 /* ======== FOOTER ======== */
 
 footer {
+	background-color: $offwhite-color;
 	padding: 2em 0;
 	margin: 0;
+
+	@include bp-small {
+		padding: 4em 0;
+	}
+
+}
+
+
+.footer-links {
+	list-style: none;
+	margin: 0 0 1em 0;
+	padding: 0;
+}
+
+
+.back-top {
+	@include font-size(19.8px);
 }
