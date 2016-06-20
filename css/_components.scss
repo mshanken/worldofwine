@@ -26,7 +26,6 @@ header {
 
 /* ======== SECTIONS ======== */
 
-
 .subscribe-content {
 	padding: 2em 0;
 	margin: 0;
@@ -89,15 +88,11 @@ header {
     background-color: $red-color;
     box-shadow: 0 2px 0 darken($red-color, 16%);
     margin: 0 0.56em 0.56em 0;
-    padding: 0.64em;
+    padding: 0.42em;
     @include font-size(23px);
     font-weight: 600;
     line-height: 1.2;
     text-shadow: 0 1px 0 darken($red-color, 16%);
-
-    @include bp-small {
-    	@include font-size(18px);
-    }
 
 	@include bp-large {
 		@include font-size(28px);
@@ -119,6 +114,18 @@ header {
 }
 
 
+.subscribe-content-figure {
+	text-align: center;
+	margin: 0 0 1em 0;
+	padding: 0;
+}
+
+
+.cover-image img {
+	max-width: 264px;
+	@extend .box-shadow;
+}
+
 
 .event-dates {
 	padding: 0 0 0 1.32em;
@@ -132,6 +139,8 @@ header {
 		margin-bottom: 0.32em;
 	}
 }
+
+
 
 /* ======== FOOTER ======== */
 
