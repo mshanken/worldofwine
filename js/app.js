@@ -1,7 +1,10 @@
 $(document).ready(function() {
 
-    // Initialize scroll It plugin for back to top link...
+    // Initialize scrollIt plugin for back to top link...
     $.scrollIt();
+
+    // Initialize tool tips
+    $('[data-toggle="tooltip"]').tooltip();
 
 });
 
