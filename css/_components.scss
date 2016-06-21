@@ -1,8 +1,8 @@
 /* ======== HEADER ======== */
 
 header {
-	padding: 2em 0;
 	margin: 0;
+	padding: 2em 0;
 }
 
 
@@ -10,6 +10,7 @@ header {
 	margin: 0;
 	padding: 0;
 	text-align: center;
+
 	@include bp-medium {
 		text-align: left;
 	}
@@ -25,8 +26,9 @@ header {
 /* ======== SECTIONS ======== */
 
 .subscribe-content {
-	padding: 2em 0;
 	margin: 0;
+	padding: 2em 0;
+
 	@include bp-small {
 		padding: 4em 0;
 	}
@@ -39,19 +41,73 @@ header {
 
 
 
-/* ======== COMPONENTS ======== */
+/* ======== SOCIAL ICON & BUTTON FLEX CONTAINERS ======== */
 
-.notification-banner {
-	@extend .text-shadow;
+.flex-icon-container {
+	margin: 1em 0 0;
+	padding: 0;
+	display: flex;
+    flex-flow: row wrap;
+    align-items: stretch;
+    justify-content: center;
 
-	@include font-size(44px);
-	font-weight: 700;
-	text-align: center;
+    @include bp-small {
+    	margin-top: 5%;
+    }
+}
 
-	padding: 0.64em 0;
-	margin: 0;
-	background-color: $red-color;
-	color: $offwhite-color;
+
+.flex-icon-item {
+	margin: 0 0.32em 0.32em 0;
+	padding: 0;
+	flex-grow: 1;
+	align-self: center;
+	@include font-size(22px);
+    width: calc(25% - 0.64em);
+}
+
+
+.flex-icon-item a {
+	padding: 0.32em;
+    text-align: center;
+    display: block;
+	background-color: rgba($white-color, 0.42);
+    color: $black-color;
+    text-decoration: none;
+
+    @include bp-small {
+		background-color: rgba($white-color, 0.16);
+	}
+
+    &:active,
+    &:focus,
+    &:visited {
+        color: $black-color;
+        text-decoration: none;
+    }
+
+    &:hover {
+        color: $red-color;
+        text-decoration: none;
+        background-color: rgba($white-color, 0.42);
+    }
+}
+
+
+.flex-icon-item:last-of-type {
+	margin-right: 0;
+}
+
+
+.flex-icon-item a i.fa {
+    @include font-size(44px);
+    margin-right: 0;
+    vertical-align: middle;
+
+    @include bp-small {
+    	@include font-size(34px);
+    	margin-right: 0.24em;
+    }
 }
 
 
@@ -80,9 +136,9 @@ header {
 .flex-button-item {
 	flex-grow: 1;
 	align-self: center;
-
     width: 100%;
-    text-align: center;
+    padding: 0;
+    margin: 0 0.56em 0.56em 0;
 
     @include bp-small {
         width: calc(33% - 1.12em);
@@ -90,87 +146,24 @@ header {
 }
 
 
-.flex-icon-container {
-	margin: 1em 0 0;
-	padding: 0;
-	display: flex;
-    flex-flow: row wrap;
-    align-items: stretch;
-    justify-content: center;
-
-    @include bp-small {
-    	margin-top: 5%;
-    }
-}
-
-
-.flex-icon-item {
-	flex-grow: 1;
-	align-self: center;
-	@include font-size(22px);
-
-    width: 100%;
-    text-align: center;
-
-    display: block;
-	padding: 0.32em;
-	margin: 0 0.32em 0.32em 0;
-	background-color: rgba($white-color, 0.42);
-
-	@include bp-small {
-		background-color: rgba($white-color, 0.16);
-	}
-
-    width: calc(25% - 0.64em);
-
-    color: $black-color;
-    text-decoration: none;
-
-    &:active,
-    &:focus,
-    &:visited {
-        color: $black-color;
-        text-decoration: none;
-    }
-
-    &:hover {
-        color: $red-color;
-        text-decoration: none;
-        background-color: rgba($white-color, 0.42);
-    }
-
-}
-
-
-.flex-icon-item:last-of-type {
+.flex-button-item:last-of-type {
 	margin-right: 0;
 }
 
 
-.flex-icon-item i.fa {
-    @include font-size(44px);
-    margin-right: 0;
-    vertical-align: middle;
-
-    @include bp-small {
-    	@include font-size(34px);
-    	margin-right: 0.24em;
-    }
-}
-
-
 .subscribe-button {
-	display: inline-block;
+	display: block;
     border-radius: 4px;
     color: $offwhite-color;
     background-color: $red-color;
     box-shadow: 0 2px 0 darken($red-color, 16%);
-    margin: 0 0.56em 0.56em 0;
+    margin: 0;
     padding: 0.42em;
     @include font-size(23px);
     font-weight: 600;
     line-height: 1.2;
     text-shadow: 0 1px 0 darken($red-color, 16%);
+    text-align: center;
 
 	@include bp-large {
 		@include font-size(28px);
@@ -189,6 +182,21 @@ header {
 	    background-color: darken($red-color, 10%);
 	    box-shadow: 0 2px 0 $black-color;
     }
+}
+
+
+
+/* ======== COMPONENTS ======== */
+
+.notification-banner {
+	margin: 0;
+	padding: 0.64em 0;
+	@extend .text-shadow;
+	@include font-size(44px);
+	font-weight: 700;
+	text-align: center;
+	background-color: $red-color;
+	color: $offwhite-color;
 }
 
 
