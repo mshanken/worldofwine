@@ -1,5 +1,3 @@
-/* ==================================== COMPONENTS ==================================== */
-
 /* ======== HEADER ======== */
 
 header {
@@ -40,6 +38,9 @@ header {
 }
 
 
+
+/* ======== COMPONENTS ======== */
+
 .notification-banner {
 	@extend .text-shadow;
 
@@ -63,6 +64,14 @@ header {
     justify-content: center;
 
     @include bp-small {
+    	margin-top: 1.32em;
+    }
+
+    @include bp-medium {
+    	margin-top: 1.36em;
+    }
+
+    @include bp-large {
     	margin-top: 2em;
     }
 }
@@ -77,6 +86,75 @@ header {
 
     @include bp-small {
         width: calc(33% - 1.12em);
+    }
+}
+
+
+.flex-icon-container {
+	margin: 1em 0 0;
+	padding: 0;
+	display: flex;
+    flex-flow: row wrap;
+    align-items: stretch;
+    justify-content: center;
+
+    @include bp-small {
+    	margin-top: 5%;
+    }
+}
+
+
+.flex-icon-item {
+	flex-grow: 1;
+	align-self: center;
+	@include font-size(22px);
+
+    width: 100%;
+    text-align: center;
+
+    display: block;
+	padding: 0.32em;
+	margin: 0 0.32em 0.32em 0;
+	background-color: rgba($white-color, 0.42);
+
+	@include bp-small {
+		background-color: rgba($white-color, 0.16);
+	}
+
+    width: calc(25% - 0.64em);
+
+    color: $black-color;
+    text-decoration: none;
+
+    &:active,
+    &:focus,
+    &:visited {
+        color: $black-color;
+        text-decoration: none;
+    }
+
+    &:hover {
+        color: $red-color;
+        text-decoration: none;
+        background-color: rgba($white-color, 0.42);
+    }
+
+}
+
+
+.flex-icon-item:last-of-type {
+	margin-right: 0;
+}
+
+
+.flex-icon-item i.fa {
+    @include font-size(44px);
+    margin-right: 0;
+    vertical-align: middle;
+
+    @include bp-small {
+    	@include font-size(34px);
+    	margin-right: 0.24em;
     }
 }
 
@@ -98,19 +176,19 @@ header {
 		@include font-size(28px);
 	}
 
-	    &:active,
-        &:focus,
-        &:visited {
-            color: $offwhite-color;
-		    background-color: $red-color;
-		    box-shadow: 0 2px 0 darken($red-color, 16%);
-        }
+    &:active,
+    &:focus,
+    &:visited {
+        color: $offwhite-color;
+	    background-color: $red-color;
+	    box-shadow: 0 2px 0 darken($red-color, 16%);
+    }
 
-        &:hover {
-            color: $white-color;
-		    background-color: darken($red-color, 10%);
-		    box-shadow: 0 2px 0 $black-color;
-        }
+    &:hover {
+        color: $white-color;
+	    background-color: darken($red-color, 10%);
+	    box-shadow: 0 2px 0 $black-color;
+    }
 }
 
 
